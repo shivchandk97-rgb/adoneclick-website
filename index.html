@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AdOneClick — Lead Management CRM & Meta Ad Automation Platform</title>
+    <meta name="description" content="AdOneClick is the unified lead management CRM for Meta Ads (Facebook & Instagram). Ingest ad leads in milliseconds, configure custom fields, automate sales routing, and track speed-to-lead SLAs.">
+    <meta name="keywords" content="lead management CRM, Meta ads lead CRM, Facebook lead ad integration, Instagram lead automation, speed to lead SLA, visual workflow automation, ad to lead CRM, custom fields for leads, lead routing round robin">
+    <meta name="author" content="AdOneClick Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adoneclick.com/">
+
+    <!-- Open Graph (OG) Meta Tags for Social & Search Previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adoneclick.com/">
+    <meta property="og:title" content="AdOneClick — Lead Management CRM & Meta Ad Automation Platform">
+    <meta property="og:description" content="Turn Meta ad clicks into closed deals in seconds. Capture Facebook & Instagram leads with custom fields, visual workflow automations, and speed-to-lead SLA timers.">
+    <meta property="og:image" content="https://adoneclick.com/images/logo.png">
+    <meta property="og:site_name" content="AdOneClick">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://adoneclick.com/">
+    <meta name="twitter:title" content="AdOneClick — Lead Management CRM & Meta Ad Automation Platform">
+    <meta name="twitter:description" content="Turn Meta ad clicks into closed deals in seconds with real-time lead management CRM, custom fields, and visual workflows.">
+    <meta name="twitter:image" content="https://adoneclick.com/images/logo.png">
+
+    <!-- JSON-LD Structured Data Schema for Search Engines (SoftwareApplication & FAQ) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "AdOneClick",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All Web Browsers, Cloud SaaS",
+          "description": "Unified Ad-to-Lead CRM and marketing automation software for Meta Ads, Facebook Lead Forms, and Instagram Lead Generation campaigns.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free 14-day trial with full Meta lead management and automations"
+          },
+          "featureList": [
+            "Meta Ads Real-Time Webhook Ingestion",
+            "Full-Cycle Kanban Lead Management Pipeline",
+            "Speed-to-Lead SLA Countdown Badges",
+            "Dynamic Custom Fields for Leads",
+            "Drag-and-Drop Visual Workflow Automation Canvas",
+            "Round-Robin & Weighted Team Routing",
+            "Instant Multi-Channel Push (WhatsApp, SMS, Slack)",
+            "Role-Based Access Control (Admin, Manager, Rep)"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "name": "AdOneClick",
+          "url": "https://adoneclick.com/",
+          "logo": "https://adoneclick.com/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8210196406",
+            "contactType": "Customer Support",
+            "email": "rirtshivchandra@gmail.com"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which ad platforms are available right now for lead management?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Meta Ads (Facebook and Instagram Lead Generation Forms) is fully available right now with instant sub-second webhook synchronization. Inbound Webhooks and REST APIs are also live. Google Ads, TikTok Ads, and LinkedIn Ads are actively in development on our roadmap."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can we configure dynamic custom fields for incoming leads?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! AdOneClick provides dynamic custom fields supporting currency, numbers, text, single-select dropdowns, multi-select checkboxes, and dates. All custom Meta ad form questions map automatically to your CRM lead properties."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Speed-to-Lead SLA tracking work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When a lead arrives from a Meta ad, an SLA timer begins counting down in real-time. Visual badges shift from green to yellow to flashing red, alerting reps and managers before lead opportunities turn cold."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Official Brand Favicon & Styles -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Top Animated Reading Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Page Preloader -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo" aria-label="AdOneClick Home">
+                <img src="images/logo.png" alt="AdOneClick" class="brand-logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="#lead-management">Lead Management</a>
+                <a href="#custom-fields">Custom Fields</a>
+                <a href="#integrations">Channels</a>
+                <a href="#automations">Automations</a>
+                <a href="#team-management">Team</a>
+                <a href="#comparison">Compare</a>
+                <a href="#faq">FAQ</a>
+                <a href="#enquiry" style="color: var(--primary); font-weight: 700;"><i class="fas fa-clipboard-list" style="margin-right: 4px;"></i> Enquiry Form</a>
+                <a href="https://app.adoneclick.com/" class="btn btn-sm btn-primary mobile-drawer-cta" target="_blank" rel="noopener">
+                    <span>Start Free Trial</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://app.adoneclick.com/" class="btn-nav-login" target="_blank" rel="noopener">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </a>
+                <a href="https://app.adoneclick.com/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+                    <span>Start Free Trial</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Floating Animated Ambient Orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-glow-bg"></div>
+
+        <div class="container hero-content">
+            <!-- Channel Status Announcement Badge -->
+            <div class="glow-pill">
+                <span class="pulsing-dot"></span>
+                <span><strong>Meta Ads Available Now</strong> • Facebook & Instagram Lead Sync Live</span>
+            </div>
+
+            <h1 class="shimmer-headline">Master Your Lead Management From Ad Click to Closed Deal</h1>
+
+            <p class="hero-subheading">
+                Stop losing high-intent buyers between your ad campaigns and your sales floor. Stream Meta leads in milliseconds, customize dynamic lead fields, automate follow-ups with visual drag-and-drop workflows, monitor speed-to-lead SLAs, and manage your entire sales team in one unified platform.
+            </p>
+
+            <!-- High-Contrast Action CTAs with Direct Enquiry Form Option -->
+            <div class="hero-ctas">
+                <a href="https://app.adoneclick.com/" class="btn btn-lg btn-primary" target="_blank" rel="noopener">
+                    <i class="fas fa-rocket"></i>
+                    <span>Start Managing Leads Free</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                </a>
+                <a href="#enquiry" class="btn btn-lg btn-secondary" style="background: #FFFFFF; border: 1.5px solid var(--border-light); color: var(--dark-800); box-shadow: var(--shadow-sm);">
+                    <i class="fas fa-paper-plane" style="color: var(--primary);"></i>
+                    <span>Submit Enquiry Form</span>
+                </a>
+            </div>
+
+            <div class="hero-guarantee">
+                <span><i class="fas fa-check-circle"></i> <strong>Available Now:</strong> Meta & Instagram Ads</span>
+                <span><i class="fas fa-clock"></i> <strong>Coming Soon:</strong> Google, TikTok & LinkedIn</span>
+                <span><i class="fas fa-check-circle"></i> Dynamic Custom Fields for Leads</span>
+                <span><i class="fas fa-check-circle"></i> Visual Automation Workflows</span>
+                <span><i class="fas fa-clipboard-check" style="color: var(--primary);"></i> <strong><a href="#enquiry" style="color: inherit; text-decoration: underline;">Enquiry Form</a></strong> Available</span>
+            </div>
+
+            <!-- Hero Mockup: High-Fidelity Lead Management Pipeline UI with Floating Cards -->
+            <div class="hero-mockup-wrapper">
+                <!-- Floating Animated Hero Card 1 (Left) -->
+                <div class="hero-floating-card hero-float-left">
+                    <div class="toast-icon-wrap" style="width: 32px; height: 32px; font-size: 0.85rem; background: linear-gradient(135deg, #1877F2 0%, #0D6EFD 100%);">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 0.78rem; font-weight: 800; color: var(--dark-900);">⚡ New Meta Lead Form</div>
+                        <div style="font-size: 0.72rem; color: var(--text-muted);">Alex Wright • Budget: $18,500 • Routed to Sarah K.</div>
+                    </div>
+                </div>
+
+                <!-- Floating Animated Hero Card 2 (Right) -->
+                <div class="hero-floating-card hero-float-right">
+                    <div class="toast-icon-wrap" style="width: 32px; height: 32px; font-size: 0.85rem; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 0.78rem; font-weight: 800; color: var(--dark-900);">🎯 Instant Auto-WhatsApp Sent</div>
+                        <div style="font-size: 0.72rem; color: #059669; font-weight: 700;">⏱️ SLA Response Time: 38 seconds</div>
+                    </div>
+                </div>
+
+                <div class="mockup-window">
+                    <div class="mockup-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">
+                            <i class="fab fa-meta" style="color: #60A5FA;"></i>
+                            <span>Meta Lead Ingestion Hub & Kanban Lead Management Pipeline</span>
+                        </div>
+                        <div class="window-status">
+                            <span class="pulsing-dot"></span>
+                            <span>Meta Webhook Sync: Active</span>
+                        </div>
+                    </div>
+
+                    <div class="mockup-toolbar">
+                        <div class="toolbar-stats">
+                            <div class="stat-pill">
+                                <span>Ingested Meta Leads Today:</span>
+                                <strong>38 Leads</strong>
+                            </div>
+                            <div class="stat-pill">
+                                <span>Avg Speed-to-Lead:</span>
+                                <strong style="color: #34D399;">1m 14s</strong>
+                            </div>
+                            <div class="stat-pill">
+                                <span>Active Sales Reps Online:</span>
+                                <strong style="color: #60A5FA;">6 Reps (Round-Robin)</strong>
+                            </div>
+                        </div>
+
+                        <div class="live-sla-badge">
+                            <i class="fas fa-stopwatch"></i>
+                            <span>SLA Response Timer Active: 5m Window</span>
+                        </div>
+                    </div>
+
+                    <div class="mockup-body">
+                        <!-- Column 1: New Leads -->
+                        <div class="pipeline-col">
+                            <div class="col-header">
+                                <div class="col-title">
+                                    <span class="pulsing-dot"></span>
+                                    <span>New Ingested Leads</span>
+                                </div>
+                                <span class="col-count">6</span>
+                            </div>
+                            <div class="col-cards">
+                                <div class="lead-card card-active">
+                                    <div class="card-top">
+                                        <span class="platform-badge badge-meta">
+                                            <i class="fab fa-facebook"></i> Facebook Lead Ad
+                                        </span>
+                                        <span class="card-sla sla-urgent">
+                                            <i class="fas fa-stopwatch"></i> <span class="sla-live-timer">01:42</span>
+                                        </span>
+                                    </div>
+                                    <div class="card-lead-name">Alexander Wright</div>
+                                    <div class="card-lead-meta">Campaign: Enterprise Scaling Q4</div>
+                                    <div class="card-amount-rep">
+                                        <span class="card-deal-value">$18,500</span>
+                                        <div class="card-rep-avatar">
+                                            <span class="rep-mini-img">SK</span>
+                                            <span>Sarah K.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lead-card">
+                                    <div class="card-top">
+                                        <span class="platform-badge badge-meta">
+                                            <i class="fab fa-instagram"></i> Instagram Story Form
+                                        </span>
+                                        <span class="card-sla sla-warning">
+                                            <i class="fas fa-stopwatch"></i> <span class="sla-live-timer">03:19</span>
+                                        </span>
+                                    </div>
+                                    <div class="card-lead-name">Elena Rostova</div>
+                                    <div class="card-lead-meta">Adset: High-Intent Retargeting</div>
+                                    <div class="card-amount-rep">
+                                        <span class="card-deal-value">$25,000</span>
+                                        <div class="card-rep-avatar">
+                                            <span class="rep-mini-img" style="background: #06B6D4;">DL</span>
+                                            <span>David L.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Contacted -->
+                        <div class="pipeline-col">
+                            <div class="col-header">
+                                <div class="col-title">
+                                    <i class="fas fa-phone-alt" style="color: #60A5FA; font-size: 0.8rem;"></i>
+                                    <span>Contacted</span>
+                                </div>
+                                <span class="col-count">12</span>
+                            </div>
+                            <div class="col-cards">
+                                <div class="lead-card">
+                                    <div class="card-top">
+                                        <span class="platform-badge badge-meta">
+                                            <i class="fab fa-facebook"></i> Facebook Instant Form
+                                        </span>
+                                        <span class="card-sla sla-good">
+                                            <i class="fas fa-check"></i> Responded (48s)
+                                        </span>
+                                    </div>
+                                    <div class="card-lead-name">Marcus Vance</div>
+                                    <div class="card-lead-meta">Auto-WhatsApp Sent & Replied</div>
+                                    <div class="card-amount-rep">
+                                        <span class="card-deal-value">$42,000</span>
+                                        <div class="card-rep-avatar">
+                                            <span class="rep-mini-img" style="background: #10B981;">EM</span>
+                                            <span>Emma M.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3: Qualified -->
+                        <div class="pipeline-col">
+                            <div class="col-header">
+                                <div class="col-title">
+                                    <i class="fas fa-check-double" style="color: #FBBF24; font-size: 0.8rem;"></i>
+                                    <span>Qualified</span>
+                                </div>
+                                <span class="col-count">9</span>
+                            </div>
+                            <div class="col-cards">
+                                <div class="lead-card">
+                                    <div class="card-top">
+                                        <span class="platform-badge badge-meta">
+                                            <i class="fab fa-instagram"></i> Instagram Lead
+                                        </span>
+                                        <span class="card-sla sla-good">
+                                            <i class="fas fa-bolt"></i> Budget Verified
+                                        </span>
+                                    </div>
+                                    <div class="card-lead-name">Chloe Davenport</div>
+                                    <div class="card-lead-meta">Budget: $10k+ / month</div>
+                                    <div class="card-amount-rep">
+                                        <span class="card-deal-value">$15,000</span>
+                                        <div class="card-rep-avatar">
+                                            <span class="rep-mini-img">SK</span>
+                                            <span>Sarah K.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 4: Meeting Booked / Won -->
+                        <div class="pipeline-col">
+                            <div class="col-header">
+                                <div class="col-title">
+                                    <i class="fas fa-trophy" style="color: #34D399; font-size: 0.8rem;"></i>
+                                    <span>Meeting Booked</span>
+                                </div>
+                                <span class="col-count">8</span>
+                            </div>
+                            <div class="col-cards">
+                                <div class="lead-card" style="border-left: 3px solid #10B981;">
+                                    <div class="card-top">
+                                        <span class="platform-badge badge-meta">
+                                            <i class="fab fa-facebook"></i> Meta Lead Ad
+                                        </span>
+                                        <span style="font-size: 0.72rem; color: #34D399; font-weight: 700;">
+                                            <i class="fas fa-calendar-check"></i> Today 3 PM
+                                        </span>
+                                    </div>
+                                    <div class="card-lead-name">Apex Global Technologies</div>
+                                    <div class="card-lead-meta">1-Click Booking Confirmed</div>
+                                    <div class="card-amount-rep">
+                                        <span class="card-deal-value">$64,000</span>
+                                        <div class="card-rep-avatar">
+                                            <span class="rep-mini-img" style="background: #8B5CF6;">JS</span>
+                                            <span>Jordan S.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Simulated Real-Time Toast -->
+                <div class="floating-notification-toast">
+                    <div class="toast-icon-wrap">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="toast-text">
+                        <h5>New Meta Lead Ingested (Sub-Second)</h5>
+                        <p>Sarah Jenkins • Routed to Marcus V. • SLA countdown started (04:59)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels & Roadmap Section -->
+    <section class="social-proof" id="integrations">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2.5rem;">
+                <span class="section-tag">Supported Channels & Platform Roadmap</span>
+                <h2 class="section-title">Connect Your Ad Lead Generation Ecosystem</h2>
+                <p class="section-subtitle">
+                    <strong>Meta Ads (Facebook & Instagram) is available now</strong> with instant bi-directional webhook synchronization. Additional major ad channels are actively in development and rolling out next.
+                </p>
+            </div>
+
+            <div class="logo-grid">
+                <!-- Meta Available Now -->
+                <div class="partner-logo-item active-channel">
+                    <i class="fab fa-meta" style="color: #0668E1;"></i>
+                    <span>Meta Ads</span>
+                    <span class="badge-live-now"><span class="pulsing-dot"></span> Available Now</span>
+                </div>
+
+                <div class="partner-logo-item active-channel">
+                    <i class="fab fa-instagram" style="color: #E1306C;"></i>
+                    <span>Instagram Leads</span>
+                    <span class="badge-live-now"><span class="pulsing-dot"></span> Available Now</span>
+                </div>
+
+                <div class="partner-logo-item active-channel">
+                    <i class="fas fa-network-wired" style="color: #FF4A00;"></i>
+                    <span>Inbound Webhooks API</span>
+                    <span class="badge-live-now"><span class="pulsing-dot"></span> Available Now</span>
+                </div>
+
+                <!-- Coming Soon Channels -->
+                <div class="partner-logo-item future-channel">
+                    <i class="fab fa-google" style="color: #4285F4;"></i>
+                    <span>Google Ads</span>
+                    <span class="badge-coming-soon">Coming Soon</span>
+                </div>
+
+                <div class="partner-logo-item future-channel">
+                    <i class="fab fa-tiktok" style="color: #000000;"></i>
+                    <span>TikTok Ads</span>
+                    <span class="badge-coming-soon">Coming Soon</span>
+                </div>
+
+                <div class="partner-logo-item future-channel">
+                    <i class="fab fa-linkedin" style="color: #0A66C2;"></i>
+                    <span>LinkedIn Ads</span>
+                    <span class="badge-coming-soon">Coming Soon</span>
+                </div>
+
+                <div class="partner-logo-item future-channel">
+                    <i class="fab fa-salesforce" style="color: #00A1E0;"></i>
+                    <span>Salesforce CRM</span>
+                    <span class="badge-coming-soon">Coming Soon</span>
+                </div>
+
+                <div class="partner-logo-item future-channel">
+                    <i class="fab fa-hubspot" style="color: #FF7A59;"></i>
+                    <span>HubSpot</span>
+                    <span class="badge-coming-soon">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI Stats Strip -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">3.8x</div>
+                    <div class="stat-label">Faster Speed-to-Lead</div>
+                    <div class="stat-sub">From Meta ad submission to first sales contact</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">99.98%</div>
+                    <div class="stat-label">Ingestion Reliability</div>
+                    <div class="stat-sub">Zero dropped Meta lead form payloads</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">42%</div>
+                    <div class="stat-label">Higher Closed-Won Rate</div>
+                    <div class="stat-sub">Driven by instant assignment & SLA timers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">< 120ms</div>
+                    <div class="stat-label">Routing Latency</div>
+                    <div class="stat-sub">Sub-second automation execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Lead Management Section: How Lead Management Works -->
+    <section class="feature-showcase" id="lead-management">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How Lead Management Works</span>
+                <h2 class="section-title">The Complete Full-Cycle Lead Management Engine</h2>
+                <p class="section-subtitle">
+                    Turn messy ad form submissions into an organized, high-velocity revenue pipeline. Manage every stage of the prospect journey from first click to closed-won.
+                </p>
+            </div>
+
+            <!-- Segmented Tabs Navigation -->
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-tab="tab-sync">
+                    <i class="fab fa-meta"></i>
+                    <span>1. Meta Lead Capture</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-crm">
+                    <i class="fas fa-columns"></i>
+                    <span>2. Kanban Pipeline & SLAs</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-automation">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>3. Workflow Automation</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-team">
+                    <i class="fas fa-users-cog"></i>
+                    <span>4. Team & Rep Management</span>
+                </button>
+            </div>
+
+            <!-- Tab 1: Meta Lead Capture -->
+            <div class="tab-content-panel active" id="tab-sync">
+                <div class="tab-details">
+                    <span class="tab-badge" style="background: #EFF6FF; color: #2563EB;">Meta Ads Available Now</span>
+                    <h3>Instant Meta Lead Form Ingestion & Smart Field Mapping</h3>
+                    <p>
+                        Connect your Facebook and Instagram lead generation campaigns in under 60 seconds with native OAuth. When a user submits an Instant Form on Instagram or Facebook, the lead payload streams into AdOneClick in real-time with zero delay.
+                    </p>
+                    <div class="tab-feature-list">
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Native Meta Webhooks Integration</h4>
+                                <p>Direct token verification and automatic payload decryption without third-party connector fees.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Visual Drag-and-Drop Field Mapping</h4>
+                                <p>Easily map custom questions (budget, timeline, company size) directly into custom lead properties.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Payload Validation & Zero Drop Queue</h4>
+                                <p>Automated phone/email sanitization and resilient retry buffers if downstream systems throttle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://app.adoneclick.com/" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span>Connect Meta Ads in 60s</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tab-preview-card">
+                    <div class="mapping-box">
+                        <div class="mapping-header">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fab fa-facebook" style="color: #60A5FA;"></i>
+                                <span>Meta Lead Form Field Mapping (Live Sync)</span>
+                            </div>
+                            <span class="badge-live-now"><span class="pulsing-dot"></span> Active</span>
+                        </div>
+
+                        <div class="mapping-row">
+                            <div class="source-tag">meta.instant_form.full_name</div>
+                            <div class="map-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="crm-tag">contact.full_name</div>
+                        </div>
+                        <div class="mapping-row">
+                            <div class="source-tag">meta.instant_form.email</div>
+                            <div class="map-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="crm-tag">contact.work_email</div>
+                        </div>
+                        <div class="mapping-row">
+                            <div class="source-tag">meta.instant_form.phone</div>
+                            <div class="map-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="crm-tag">contact.phone [E.164 Cleaned]</div>
+                        </div>
+                        <div class="mapping-row">
+                            <div class="source-tag">meta.form.custom_budget</div>
+                            <div class="map-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="crm-tag">deal.projected_budget</div>
+                        </div>
+                        <div class="mapping-row">
+                            <div class="source-tag">campaign_id & adset_name</div>
+                            <div class="map-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="crm-tag">attribution.meta_campaign</div>
+                        </div>
+
+                        <div class="mapping-status">
+                            <span><i class="fas fa-shield-alt" style="color: #10B981;"></i> 256-bit Webhook Encryption Active</span>
+                            <span style="color: #34D399; font-weight: 700;">Verified 200 OK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Kanban Pipeline & SLAs -->
+            <div class="tab-content-panel" id="tab-crm">
+                <div class="tab-details">
+                    <span class="tab-badge">Visual Lead Management</span>
+                    <h3>Track Every Prospect with Speed-to-Lead SLA Countdown Timers</h3>
+                    <p>
+                        78% of ad leads buy from the vendor that contacts them first. AdOneClick embeds live countdown badges directly on every lead card, warning reps and sales managers before lead opportunities go cold.
+                    </p>
+                    <div class="tab-feature-list">
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Full-Lifecycle Kanban Stages</h4>
+                                <p>Track leads seamlessly: <em>New Lead ➔ Contacted ➔ Qualified ➔ Meeting Booked ➔ Converted to Customer</em>.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Visual SLA Alert Badges</h4>
+                                <p>Countdown timers pulse from green to warning amber to urgent red as your SLA window elapses.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>1-Click Deal Conversion & Custom Fields</h4>
+                                <p>Convert qualified leads into customers with one click, capturing currency, payment terms, and notes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://app.adoneclick.com/" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span>Explore Kanban Pipeline</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tab-preview-card">
+                    <div class="mapping-box" style="background: #0B1120;">
+                        <div class="mapping-header">
+                            <span>⚡ Live Speed-to-Lead Response Monitor</span>
+                            <span class="live-sla-badge" style="background: rgba(239, 68, 68, 0.2); color: #F87171; border-color: rgba(239, 68, 68, 0.4);">
+                                <i class="fas fa-exclamation-triangle"></i> Response Window Alert
+                            </span>
+                        </div>
+                        <div style="padding: 16px 0; display: flex; flex-direction: column; gap: 14px;">
+                            <div style="background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 14px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                    <strong style="color: white; font-size: 0.95rem;">William Sterling</strong>
+                                    <span style="color: #F87171; font-weight: 800; font-size: 0.82rem;">⏱️ 00:54 SLA remaining</span>
+                                </div>
+                                <div style="font-size: 0.78rem; color: #94A3B8; margin-bottom: 10px;">Source: Facebook Ad "Enterprise Plan" • Budget: $32,000</div>
+                                <div style="display: flex; gap: 8px;">
+                                    <a href="https://app.adoneclick.com/" target="_blank" class="btn btn-sm btn-primary" style="padding: 4px 12px; font-size: 0.75rem;">
+                                        <i class="fas fa-phone-alt"></i> Call Now
+                                    </a>
+                                    <a href="https://app.adoneclick.com/" target="_blank" class="btn btn-sm btn-secondary" style="padding: 4px 12px; font-size: 0.75rem; background: #1E293B; color: white; border-color: rgba(255, 255, 255, 0.1);">
+                                        <i class="fab fa-whatsapp"></i> Send WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 14px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                    <strong style="color: white; font-size: 0.95rem;">Samantha Lee</strong>
+                                    <span style="color: #34D399; font-weight: 800; font-size: 0.82rem;">✅ Responded in 38s</span>
+                                </div>
+                                <div style="font-size: 0.78rem; color: #94A3B8;">Source: Instagram Story Ad • Rep: Sarah K. • Meeting Booked for Tomorrow 10 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Visual Workflow Automation -->
+            <div class="tab-content-panel" id="tab-automation">
+                <div class="tab-details">
+                    <span class="tab-badge">Automation Engine</span>
+                    <h3>Drag-and-Drop Workflow Builder for Instant Sales Execution</h3>
+                    <p>
+                        Design automated routing rules in minutes with zero code. Set conditions based on lead questionnaire answers, ad campaign name, or rep availability.
+                    </p>
+                    <div class="tab-feature-list">
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Multi-Branch Conditional Routing</h4>
+                                <p>Route enterprise buyers ($10k+ budget) to Senior Account Executives while sending smaller prospects to automated nurture sequences.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Instant Multi-Channel Push</h4>
+                                <p>Fire automated WhatsApp messages, SMS, and internal notifications the exact second a prospect submits an ad form.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Automated Task & Follow-Up Reminders</h4>
+                                <p>Create automated follow-up tasks if a rep doesn't log a call or meeting within your designated SLA threshold.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://app.adoneclick.com/" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span>Setup Automation Workflow</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tab-preview-card">
+                    <div class="mapping-box" style="background: #0F172A;">
+                        <div class="mapping-header">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-sitemap" style="color: #F59E0B;"></i>
+                                <span>Active Workflow: Meta Lead Ingestion & Fast-Track Routing</span>
+                            </div>
+                            <span style="color: #34D399; font-size: 0.75rem; font-weight: 700;">🟢 Active (842 executions)</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                            <div style="background: rgba(79, 70, 229, 0.15); border-left: 4px solid #4F46E5; padding: 10px 14px; border-radius: 6px; font-size: 0.84rem;">
+                                <strong>⚡ Trigger:</strong> New Lead Submitted on Meta Ads (Form: High-Intent Consultation)
+                            </div>
+                            <div style="text-align: center; color: #64748B; font-size: 0.8rem;"><i class="fas fa-arrow-down"></i></div>
+                            <div style="background: rgba(245, 158, 11, 0.15); border-left: 4px solid #F59E0B; padding: 10px 14px; border-radius: 6px; font-size: 0.84rem;">
+                                <strong>🔍 Condition:</strong> Lead Budget &ge; $5,000 AND Location == Target Market
+                            </div>
+                            <div style="text-align: center; color: #64748B; font-size: 0.8rem;"><i class="fas fa-arrow-down"></i></div>
+                            <div style="background: rgba(16, 185, 129, 0.15); border-left: 4px solid #10B981; padding: 10px 14px; border-radius: 6px; font-size: 0.84rem;">
+                                <strong>🎯 Action 1:</strong> Round-Robin Assign to Available Senior Sales Rep
+                            </div>
+                            <div style="background: rgba(6, 182, 212, 0.15); border-left: 4px solid #06B6D4; padding: 10px 14px; border-radius: 6px; font-size: 0.84rem;">
+                                <strong>💬 Action 2:</strong> Dispatch Instant WhatsApp with Calendly Link & Start 5m SLA Timer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Team & Rep Management -->
+            <div class="tab-content-panel" id="tab-team">
+                <div class="tab-details">
+                    <span class="tab-badge">Team Collaboration</span>
+                    <h3>Team Management, Role-Based Access & Performance Tracking</h3>
+                    <p>
+                        Keep your entire sales organization aligned with granular permissions, intelligent lead distribution rules, and complete activity accountability.
+                    </p>
+                    <div class="tab-feature-list">
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Granular Role-Based Access Control (RBAC)</h4>
+                                <p>Manage workspace access with predefined roles: <strong>Admin</strong> (full setup), <strong>Manager</strong> (pipeline & reports), and <strong>Sales Representative</strong> (own leads).</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Automated Round-Robin & Capacity Rules</h4>
+                                <p>Distribute leads fairly across reps, factoring in active working hours, timezones, and individual lead quotas.</p>
+                            </div>
+                        </div>
+                        <div class="feature-list-item">
+                            <div class="list-icon"><i class="fas fa-check"></i></div>
+                            <div class="list-text">
+                                <h4>Audit Trail, Activity Timeline & Leaderboard</h4>
+                                <p>Track every rep's response time, call attempts, notes timeline, and closed-won deals in real-time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://app.adoneclick.com/" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span>Manage Your Sales Team</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tab-preview-card">
+                    <div class="mapping-box" style="background: #0B1120;">
+                        <div class="mapping-header">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-users" style="color: #34D399;"></i>
+                                <span>Sales Rep Performance & Assignment Leaderboard</span>
+                            </div>
+                            <span style="font-size: 0.75rem; color: #94A3B8;">Live Rep Status</span>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+                            <div style="background: rgba(30, 41, 59, 0.7); padding: 12px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="rep-mini-img" style="width: 28px; height: 28px; font-size: 0.75rem;">SK</div>
+                                    <div>
+                                        <div style="color: white; font-weight: 700; font-size: 0.88rem;">Sarah Jenkins</div>
+                                        <span class="team-role-tag role-rep">Sales Representative</span>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="color: #34D399; font-weight: 800; font-size: 0.85rem;">42s Avg Response</div>
+                                    <div style="color: #94A3B8; font-size: 0.75rem;">18 Leads Closed • 94% SLA Met</div>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.7); padding: 12px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="rep-mini-img" style="width: 28px; height: 28px; font-size: 0.75rem; background: #06B6D4;">DL</div>
+                                    <div>
+                                        <div style="color: white; font-weight: 700; font-size: 0.88rem;">David Lu</div>
+                                        <span class="team-role-tag role-rep">Sales Representative</span>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="color: #60A5FA; font-weight: 800; font-size: 0.85rem;">1m 05s Avg Response</div>
+                                    <div style="color: #94A3B8; font-size: 0.75rem;">14 Leads Closed • 91% SLA Met</div>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.7); padding: 12px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="rep-mini-img" style="width: 28px; height: 28px; font-size: 0.75rem; background: #F59E0B;">MV</div>
+                                    <div>
+                                        <div style="color: white; font-weight: 700; font-size: 0.88rem;">Marcus Vance</div>
+                                        <span class="team-role-tag role-manager">Sales Manager</span>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="color: #FBBF24; font-weight: 800; font-size: 0.85rem;">Pipeline Overseer</div>
+                                    <div style="color: #94A3B8; font-size: 0.75rem;">Team Capacity: 84% Active</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE MODULE: Dynamic Custom Fields for Leads -->
+    <section class="workflow-section" id="custom-fields" style="background: #FFFFFF;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="background: #FDF4FF; color: #9333EA; border-color: rgba(147, 51, 234, 0.2);">CRM Customization Engine</span>
+                <h2 class="section-title">Dynamic Custom Fields for Leads</h2>
+                <p class="section-subtitle">
+                    Every business collects unique prospect information. Extend lead profiles on the fly with custom properties that map automatically from your Meta ad question payloads.
+                </p>
+            </div>
+
+            <!-- Custom Field Type Segmented Selector -->
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                <button class="tab-btn cf-pill active" data-field="budget">
+                    <i class="fas fa-dollar-sign" style="color: #10B981;"></i>
+                    <span>Currency (Budget)</span>
+                </button>
+                <button class="tab-btn cf-pill" data-field="timeline">
+                    <i class="fas fa-clock" style="color: #F59E0B;"></i>
+                    <span>Single-Select Dropdown</span>
+                </button>
+                <button class="tab-btn cf-pill" data-field="team_size">
+                    <i class="fas fa-users" style="color: #6366F1;"></i>
+                    <span>Number (Company Size)</span>
+                </button>
+                <button class="tab-btn cf-pill" data-field="preferred_channel">
+                    <i class="fas fa-check-square" style="color: #06B6D4;"></i>
+                    <span>Multi-Select Checkboxes</span>
+                </button>
+            </div>
+
+            <!-- Interactive Custom Field Mapping Display -->
+            <div id="cfFieldDisplay" style="max-width: 860px; margin: 0 auto; width: 100%;">
+                <div style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 20px; color: white; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                        <strong style="color: #60A5FA; font-size: 1.05rem;">Projected Budget (Currency Field)</strong>
+                        <span style="background: rgba(79, 70, 229, 0.25); color: #A5B4FC; font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; font-weight: 700;">Currency Field</span>
+                    </div>
+                    <div class="cf-grid-cols">
+                        <div>
+                            <span style="color: #94A3B8; display: block; font-size: 0.78rem; margin-bottom: 3px;">Meta Form Source Question:</span>
+                            <code style="color: #38BDF8; font-family: monospace; background: rgba(255, 255, 255, 0.06); padding: 4px 8px; border-radius: 4px; word-break: break-all;">meta.form_answers.monthly_spend</code>
+                        </div>
+                        <div>
+                            <span style="color: #94A3B8; display: block; font-size: 0.78rem; margin-bottom: 3px;">CRM Property Destination:</span>
+                            <code style="color: #34D399; font-family: monospace; background: rgba(255, 255, 255, 0.06); padding: 4px 8px; border-radius: 4px; word-break: break-all;">deal.budget_amount</code>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 12px 16px; border-radius: 8px; font-size: 0.84rem; margin-bottom: 12px;">
+                        <span style="color: #94A3B8;">Sample Ingested Value: </span>
+                        <strong style="color: #FFFFFF;">$15,000 / month</strong>
+                    </div>
+                    <div style="color: #FBBF24; font-size: 0.82rem;">
+                        <i class="fas fa-bolt"></i> <strong>Automation Trigger:</strong> If Budget &ge; $10k ➔ Route to Senior Account Executive & Send Urgent Slack Alert.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Automation Workflow Highlight Section with Interactive Simulator -->
+    <section class="workflow-section" id="automations" style="background: #F8FAFC;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visual Drag-and-Drop Builder</span>
+                <h2 class="section-title">Automate Sales Velocity From the First Click</h2>
+                <p class="section-subtitle">
+                    Click the <strong>Simulate Lead Ingestion Flow</strong> button below to watch a simulated lead packet travel through the workflow nodes in real-time.
+                </p>
+                <div style="margin-top: 1rem;">
+                    <button id="btnRunSimulation" class="btn btn-sm btn-primary" style="box-shadow: 0 4px 18px rgba(79, 70, 229, 0.4);">
+                        <i class="fas fa-play"></i>
+                        <span>Simulate Lead Ingestion Flow</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <div class="workflow-flow">
+                    <!-- Node 1: Trigger -->
+                    <div class="wf-node wf-node-trigger card-active" id="node-trigger">
+                        <div class="node-type-label">
+                            <i class="fab fa-meta"></i> Trigger
+                        </div>
+                        <div class="node-main-title">New Lead on Meta Ads</div>
+                        <div class="node-sub">Form: Q4 Demo Request</div>
+                    </div>
+
+                    <div class="wf-connector">
+                        <div class="connector-line"></div>
+                        <span class="connector-badge">Webhook 200 OK</span>
+                    </div>
+
+                    <!-- Node 2: Filter Condition -->
+                    <div class="wf-node wf-node-condition" id="node-condition">
+                        <div class="node-type-label">
+                            <i class="fas fa-filter"></i> Condition
+                        </div>
+                        <div class="node-main-title">Custom: Budget > $5k</div>
+                        <div class="node-sub">High-Intent Filter</div>
+                    </div>
+
+                    <div class="wf-connector">
+                        <div class="connector-line"></div>
+                        <span class="connector-badge" style="color: #10B981;">If TRUE</span>
+                    </div>
+
+                    <!-- Node 3: Round Robin -->
+                    <div class="wf-node wf-node-action" id="node-roundrobin">
+                        <div class="node-type-label">
+                            <i class="fas fa-users-cog"></i> Assignment
+                        </div>
+                        <div class="node-main-title">Round-Robin Rep</div>
+                        <div class="node-sub">Available & In-Timezone</div>
+                    </div>
+
+                    <div class="wf-connector">
+                        <div class="connector-line"></div>
+                        <span class="connector-badge">< 15s</span>
+                    </div>
+
+                    <!-- Node 4: Action SMS & WhatsApp -->
+                    <div class="wf-node wf-node-action" id="node-action-sms">
+                        <div class="node-type-label">
+                            <i class="fab fa-whatsapp"></i> Multi-Channel
+                        </div>
+                        <div class="node-main-title">Instant WhatsApp</div>
+                        <div class="node-sub">With Calendly Booking</div>
+                    </div>
+
+                    <div class="wf-connector">
+                        <div class="connector-line"></div>
+                        <span class="connector-badge">Sync</span>
+                    </div>
+
+                    <!-- Node 5: Action CRM Pipeline -->
+                    <div class="wf-node wf-node-action" id="node-action-crm">
+                        <div class="node-type-label">
+                            <i class="fas fa-chart-pie"></i> Pipeline
+                        </div>
+                        <div class="node-main-title">Create Kanban Card</div>
+                        <div class="node-sub">Start 5m SLA Timer</div>
+                    </div>
+                </div>
+
+                <div class="workflow-status-callout">
+                    <div class="callout-left">
+                        <span class="pulsing-dot"></span>
+                        <div id="workflowNodeDetail">
+                            🎯 <strong>Meta Ads Webhook:</strong> Ingests Facebook & Instagram lead submissions instantly with 256-bit signature validation in < 120ms.
+                        </div>
+                    </div>
+                    <a href="https://app.adoneclick.com/" target="_blank" class="btn btn-sm btn-primary" style="flex-shrink: 0;" rel="noopener">
+                        <span>Launch Builder</span>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Team Management Section -->
+    <section class="workflow-section" id="team-management" style="background: #FFFFFF;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sales Team Collaboration</span>
+                <h2 class="section-title">Built for Modern Sales Floors & High-Growth Agencies</h2>
+                <p class="section-subtitle">
+                    Organize your sales team with role-based permissions, automated round-robin lead distribution, call logging, notes timeline, and team accountability.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <div class="stat-box" style="text-align: left; padding: 28px; background: #F8FAFC;">
+                    <div class="contact-icon" style="margin-bottom: 1.2rem;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-900); margin-bottom: 8px;">Role-Based Permissions</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+                        Configure custom workspace permissions. Admins control billing & connectors, Managers view pipeline velocity & team metrics, and Reps focus on their assigned leads.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="text-align: left; padding: 28px; background: #F8FAFC;">
+                    <div class="contact-icon" style="margin-bottom: 1.2rem; background: #ECFDF5; color: #10B981;">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-900); margin-bottom: 8px;">Weighted Round-Robin</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+                        Distribute leads automatically based on working schedules, rep availability, and performance tiers to ensure immediate lead contact.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="text-align: left; padding: 28px; background: #F8FAFC;">
+                    <div class="contact-icon" style="margin-bottom: 1.2rem; background: #FFFBEB; color: #F59E0B;">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-900); margin-bottom: 8px;">Activity Audit Timeline</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+                        Complete chronological audit log on every lead card. See exact timestamps of when a lead was captured, assigned, contacted, notes added, or status changed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Competitive Benchmark</span>
+                <h2 class="section-title">Why Fast-Growing Teams Choose AdOneClick</h2>
+                <p class="section-subtitle">
+                    Legacy enterprise CRMs were built for slow desktop sales reps in 2005. Fragmented spreadsheet stacks break constantly. AdOneClick is purpose-built for paid ad velocity.
+                </p>
+            </div>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability / Requirement</th>
+                            <th class="col-highlight">AdOneClick</th>
+                            <th>Traditional CRMs (Salesforce / HubSpot)</th>
+                            <th>Fragmented Tool Stacks (Zapier + Sheets)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Setup & Onboarding Time</td>
+                            <td class="col-highlight"><strong style="color: var(--primary);">< 5 Minutes (Self-Serve)</strong></td>
+                            <td>3 to 8 Months + Expensive Consultants</td>
+                            <td>2 to 4 Days (Requires Ongoing Fixes)</td>
+                        </tr>
+                        <tr>
+                            <td>Native Meta & Instagram Lead Ingestion</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Built-in Native Connectors (Live)</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Requires Expensive Third-Party Apps</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> High Failure Rate on Large Volumes</td>
+                        </tr>
+                        <tr>
+                            <td>Speed-to-Lead Live SLA Countdown Timers</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Real-time Visible Countdown Badges</td>
+                            <td><i class="fas fa-times-circle feature-cross"></i> Not Available (Complex custom dev)</td>
+                            <td><i class="fas fa-times-circle feature-cross"></i> Impossible in Spreadsheets</td>
+                        </tr>
+                        <tr>
+                            <td>Dynamic Custom Fields for Leads</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Unlimited Custom Fields & Types</td>
+                            <td><i class="fas fa-check-circle feature-check"></i> Complex schema migrations</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Column breakage in sheets</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Drag-and-Drop Workflow Canvas</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Included in all accounts</td>
+                            <td><i class="fas fa-check-circle feature-check"></i> Locked behind enterprise tiers</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Multi-app subscription fatigue</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Channel Instant Alerts (WhatsApp / SMS / Slack)</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Native Multi-Channel Engine</td>
+                            <td><i class="fas fa-times-circle feature-cross"></i> Requires Twilio dev & add-ons</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Clunky webhooks & delays</td>
+                        </tr>
+                        <tr>
+                            <td>Full Team Management & Round-Robin Routing</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Multi-agent RBAC included</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Expensive per-seat charges</td>
+                            <td><i class="fas fa-times-circle feature-cross"></i> Manual assignment required</td>
+                        </tr>
+                        <tr>
+                            <td>1-Click Customer Conversion & Booking Engine</td>
+                            <td class="col-highlight"><i class="fas fa-check-circle feature-check"></i> Seamless Instant Conversion</td>
+                            <td><i class="fas fa-exclamation-triangle feature-warn"></i> Multi-step cumbersome screens</td>
+                            <td><i class="fas fa-times-circle feature-cross"></i> Manual copy-paste entry</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive FAQ Accordion -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Frequently Asked Questions</span>
+                <h2 class="section-title">Everything You Need to Know</h2>
+                <p class="section-subtitle">
+                    Have questions about connecting Meta Ads, upcoming channels, custom fields, or team onboarding? We've got answers.
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Which ad platforms are available right now for lead management?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>Meta Ads (Facebook & Instagram Lead Generation Forms) is fully available right now</strong> with instant bi-directional webhook synchronization. Custom Inbound Webhooks & REST API are also live. Integrations for Google Ads Lead Form Assets, TikTok Ads, and LinkedIn Ads are actively in development and rolling out soon.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do dynamic custom fields work with Meta ad forms?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can create unlimited custom fields in AdOneClick (Text, Currency, Numbers, Single/Multi-Select Dropdowns, and Dates). When mapping your Meta Instant Form questions, each answer field attaches seamlessly to the lead record and can be used to trigger automation conditions or filter leads in the Kanban pipeline.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How fast does lead management setup take?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Setup takes less than 5 minutes. Simply log into AdOneClick, connect your Meta ad account via OAuth, select the ad forms you wish to sync, and your leads begin flowing into your Kanban pipeline in real-time.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How does the Speed-to-Lead SLA countdown timer work?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You define your target response window (e.g. 5 minutes, 15 minutes, or 1 hour). When a lead arrives from a Meta ad, an SLA timer begins counting down in real-time. If unaddressed, the badge shifts from green to yellow to flashing red, sending escalation alerts to sales managers before the prospect turns cold.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do automation workflows and team routing work?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        With our visual drag-and-drop workflow canvas, you can automatically distribute incoming leads to online sales representatives using weighted Round-Robin assignment, send instant personalized WhatsApp/SMS alerts to prospects, and trigger automated reminders.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I invite my sales team members and manage their roles?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! AdOneClick includes full team collaboration with Role-Based Access Control (Admin, Sales Manager, and Sales Representative) so each team member has the exact visibility and permissions they need.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Consultation & Enquiry Form Section -->
+    <section class="page-content" id="enquiry" style="padding: 40px 0; background: #F8FAFC; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="background: #EEF2FF; color: var(--primary);"><i class="fas fa-file-invoice" style="margin-right: 6px;"></i> Official Enquiry Form</span>
+                <h2 class="section-title">Lead Management Consultation & Enquiry Form</h2>
+                <p class="section-subtitle">
+                    Have questions about setting up Meta Lead Ads, configuring dynamic custom fields, or building custom automation workflows for your sales team? Fill out our enquiry form below or reach us directly.
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Direct Support & Headquarters</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h4>Instant 5-Minute Setup</h4>
+                            <p>Connect your Facebook & Instagram lead forms self-serve with zero code.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Us Directly</h4>
+                            <p>rirtshivchandra@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone / WhatsApp</h4>
+                            <p>+91 8210196406</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p>403, 22 Main, 9 cross, HSR Layout, Bengaluru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Enterprise SLA & Security</h4>
+                            <p>24/7 Webhook monitoring with 99.98% ingestion reliability guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--dark-900); margin-bottom: 1.1rem;">
+                        <i class="fas fa-paper-plane" style="color: var(--primary); margin-right: 8px;"></i>
+                        Send Your Enquiry
+                    </h3>
+                    <form id="inquiry-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Alexander Wright">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="workEmail" required placeholder="alex@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="3" required placeholder="Tell us about your Meta campaigns, custom field requirements, or team setup..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane" style="margin-right: 6px;"></i>
+                            <span>Submit Enquiry Form</span>
+                        </button>
+                        <div class="success-message"></div>
+                        <div class="error-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final High-Converting CTA Banner -->
+    <section class="cta-banner-section">
+        <div class="cta-banner-glow"></div>
+        <div class="container">
+            <div class="cta-banner-content">
+                <h2>Ready to Turn Clicks Into Paying Customers?</h2>
+                <p>
+                    Join high-growth sales and marketing teams closing deals faster. Connect your Meta ad accounts in 60 seconds and experience the power of instant speed-to-lead.
+                </p>
+
+                <div class="cta-actions">
+                    <a href="https://app.adoneclick.com/" class="btn btn-lg btn-white" target="_blank" rel="noopener">
+                        <i class="fas fa-bolt" style="color: var(--primary);"></i>
+                        <span>Start Free Trial in 60 Seconds</span>
+                    </a>
+                    <a href="#enquiry" class="btn btn-lg btn-secondary" style="background: rgba(255, 255, 255, 0.15); color: white; border-color: rgba(255, 255, 255, 0.35);">
+                        <i class="fas fa-clipboard-list" style="margin-right: 6px;"></i>
+                        <span>Submit Enquiry Form</span>
+                    </a>
+                    <a href="https://app.adoneclick.com/" class="btn btn-lg btn-secondary" target="_blank" rel="noopener" style="background: rgba(255, 255, 255, 0.08); color: white; border-color: rgba(255, 255, 255, 0.2);">
+                        <span>Sign In to Dashboard</span>
+                        <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
+                    </a>
+                </div>
+
+                <div class="cta-banner-note">
+                    ✨ No credit card required • 14-day free trial • Cancel anytime • Zero software to install
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global SaaS Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.png" alt="AdOneClick" class="footer-logo-img">
+                    </a>
+                    <p>The unified ad-to-lead CRM and marketing automation platform built for high-velocity revenue teams.</p>
+                    <div class="system-status">
+                        <span class="pulsing-dot"></span>
+                        <span>Meta Ads Sync Operational (99.98%)</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Lead Management</h5>
+                    <ul>
+                        <li><a href="#lead-management">Meta Lead Capture</a></li>
+                        <li><a href="#custom-fields">Custom Fields for Leads</a></li>
+                        <li><a href="#lead-management">Kanban Pipeline</a></li>
+                        <li><a href="#lead-management">SLA Countdown Timers</a></li>
+                        <li><a href="#automations">Workflow Automation</a></li>
+                        <li><a href="#team-management">Team Management</a></li>
+                        <li><a href="#enquiry">Submit Lead Enquiry</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Channels</h5>
+                    <ul>
+                        <li><a href="#integrations"><span style="color: #34D399;">●</span> Meta Ads (Live)</a></li>
+                        <li><a href="#integrations"><span style="color: #34D399;">●</span> Instagram Leads (Live)</a></li>
+                        <li><a href="#integrations"><span style="color: #94A3B8;">○</span> Google Ads (Coming Soon)</a></li>
+                        <li><a href="#integrations"><span style="color: #94A3B8;">○</span> TikTok Ads (Coming Soon)</a></li>
+                        <li><a href="#integrations"><span style="color: #94A3B8;">○</span> LinkedIn Ads (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Company & Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#enquiry">Enquiry Form</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="https://app.adoneclick.com/" target="_blank" rel="noopener">Customer Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><span style="color: #CBD5E1; font-size: 0.85rem;"><i class="fas fa-envelope" style="margin-right: 6px; color: #6366F1;"></i> rirtshivchandra@gmail.com</span></li>
+                        <li><span style="color: #CBD5E1; font-size: 0.85rem;"><i class="fas fa-phone" style="margin-right: 6px; color: #6366F1;"></i> +91 8210196406</span></li>
+                        <li><span style="color: #94A3B8; font-size: 0.82rem;">24/7 Global Ingestion Support</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 AdOneClick Inc. All rights reserved.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Support</a>
+                    <a href="https://app.adoneclick.com/" target="_blank" rel="noopener">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Enquiry Form Quick Action -->
+    <a href="#enquiry" class="floating-enquiry-btn" title="Have questions? Submit an Enquiry">
+        <i class="fas fa-clipboard-list"></i>
+        <span>Enquiry Form</span>
+    </a>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

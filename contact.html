@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — AdOneClick</title>
+    <meta name="description" content="Get in touch with the AdOneClick team for support, enterprise demos, and integrations.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo" aria-label="AdOneClick Home">
+                <img src="images/logo.png" alt="AdOneClick" class="brand-logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html#lead-management">Lead Management</a>
+                <a href="index.html#integrations">Channels</a>
+                <a href="index.html#automations">Automations</a>
+                <a href="index.html#team-management">Team</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="contact.html" class="active" style="color: var(--primary); font-weight: 700;"><i class="fas fa-clipboard-list" style="margin-right: 4px;"></i> Enquiry Form</a>
+                <a href="https://app.adoneclick.com/" class="btn btn-sm btn-primary mobile-drawer-cta" target="_blank" rel="noopener">
+                    <span>Start Free Trial</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://app.adoneclick.com/" class="btn-nav-login" target="_blank" rel="noopener">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </a>
+                <a href="https://app.adoneclick.com/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+                    <span>Start Free Trial</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <h1>Lead Management Enquiry & Direct Contact</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin-bottom: 2rem;">
+                Have questions about Meta lead capture, custom data fields, or automated routing? Submit your enquiry form below and our technical solutions team will respond promptly.
+            </p>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Headquarters & Support</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>rirtshivchandra@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Inquiries</h4>
+                            <p>+91 8210196406</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p>403, 22 Main, 9 cross<br>HSR Layout, Bengaluru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Operating Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM IST<br>24/7 Automated Ingestion Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark-900); margin-bottom: 1.5rem;">
+                        <i class="fas fa-paper-plane" style="color: var(--primary); margin-right: 8px;"></i>
+                        Submit Enquiry Form
+                    </h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="fullName" required placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Work Email</label>
+                            <input type="email" id="contactEmail" name="workEmail" required placeholder="jane@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="3" required placeholder="Tell us how we can help your team with lead management..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane" style="margin-right: 6px;"></i>
+                            <span>Submit Enquiry Form</span>
+                        </button>
+                        <div class="success-message"></div>
+                        <div class="error-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.png" alt="AdOneClick" class="footer-logo-img">
+                    </a>
+                    <p>The unified ad-to-lead CRM and marketing automation platform built for high-velocity revenue teams.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html#lead-management">Lead Management</a></li>
+                        <li><a href="index.html#integrations">Channels</a></li>
+                        <li><a href="index.html#automations">Automations</a></li>
+                        <li><a href="index.html#team-management">Team Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="https://app.adoneclick.com/" target="_blank" rel="noopener">Sign In</a></li>
+                        <li><a href="https://app.adoneclick.com/" target="_blank" rel="noopener">Create Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Direct Support</h5>
+                    <ul>
+                        <li><span style="color: #CBD5E1; font-size: 0.85rem;">rirtshivchandra@gmail.com</span></li>
+                        <li><span style="color: #CBD5E1; font-size: 0.85rem;">+91 8210196406</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 AdOneClick Inc. All rights reserved.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="https://app.adoneclick.com/" target="_blank" rel="noopener">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
