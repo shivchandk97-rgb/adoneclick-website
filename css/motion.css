@@ -1,0 +1,237 @@
+/* ==========================================================================
+   AdOneClick - Motion & 3D Layer
+   Scroll reveals, 3D hero globe, perspective mockup, tilt cards, magnetic
+   CTAs and the 3D grid floor. All effects switch off under reduced motion.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Scroll Reveal (uses the independent `translate` property so it never
+   fights with hover/tilt `transform`s)
+   -------------------------------------------------------------------------- */
+.reveal {
+    opacity: 0;
+    translate: 0 28px;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                translate 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.section-header.reveal .section-title {
+    background: linear-gradient(90deg, var(--dark-900) 0%, var(--primary) 50%, var(--dark-900) 100%);
+    background-size: 220% auto;
+    background-position: 100% center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.section-header.reveal.is-visible .section-title {
+    background-position: 0% center;
+}
+
+/* --------------------------------------------------------------------------
+   3D Hero Globe Canvas
+   -------------------------------------------------------------------------- */
+.hero-globe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1.4s ease 0.3s;
+}
+
+.hero-globe.ready {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Perspective Hero Mockup (tilt is driven by --mock-rx / --mock-ry)
+   -------------------------------------------------------------------------- */
+.hero-mockup-wrapper {
+    perspective: 1600px;
+    perspective-origin: 50% 0%;
+}
+
+.hero-mockup-wrapper.is-3d .mockup-window {
+    transform: rotateX(var(--mock-rx, 0deg)) rotateY(var(--mock-ry, 0deg)) scale(var(--mock-scale, 1));
+    transform-origin: 50% 0%;
+    transition: transform 0.15s linear;
+    will-change: transform;
+}
+
+/* Animated conic glow behind the mockup */
+.hero-mockup-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 4% 6% -2%;
+    border-radius: 32px;
+    background: conic-gradient(from var(--glow-angle, 0deg), #4F46E5, #7C3AED, #06B6D4, #10B981, #4F46E5);
+    filter: blur(48px);
+    opacity: 0.32;
+    z-index: 0;
+    animation: glowSpin 9s linear infinite;
+    pointer-events: none;
+}
+
+.hero-mockup-wrapper .mockup-window {
+    position: relative;
+    z-index: 1;
+}
+
+@property --glow-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes glowSpin {
+    to { --glow-angle: 360deg; }
+}
+
+.hero-floating-card {
+    transition: translate 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   3D Tilt Cards with Glare
+   -------------------------------------------------------------------------- */
+.tilt-card {
+    transform-style: preserve-3d;
+}
+
+.tilt-card.tilt-active {
+    transition: transform 0.12s ease-out, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.stat-box.tilt-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.tilt-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 55%);
+    mix-blend-mode: soft-light;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.tilt-active .tilt-glare {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Animated Stat Numbers
+   -------------------------------------------------------------------------- */
+.stat-number {
+    font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Magnetic CTAs + Shine Sweep
+   -------------------------------------------------------------------------- */
+.btn-primary,
+.btn-white {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn-primary::after,
+.btn-white::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.btn-primary:hover::after,
+.btn-white:hover::after {
+    animation: btnShine 0.85s ease;
+}
+
+.btn-lg.btn-primary::after {
+    animation: btnShine 0.85s ease 2.2s 1;
+}
+
+@keyframes btnShine {
+    to { left: 125%; }
+}
+
+.magnetic {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   CTA Banner: Moving 3D Grid Floor
+   -------------------------------------------------------------------------- */
+.cta-banner-section::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    bottom: 0;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(99, 102, 241, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.45) 1px, transparent 1px);
+    background-size: 56px 56px;
+    transform: perspective(600px) rotateX(52deg);
+    transform-origin: 50% 100%;
+    -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.55) 40%, transparent 85%);
+    mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.55) 40%, transparent 85%);
+    animation: gridMove 3.5s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-banner-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gridMove {
+    to { background-position: 0 56px; }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion: show everything, animate nothing
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        translate: none;
+        transition: none;
+    }
+
+    .hero-globe,
+    .tilt-glare {
+        display: none;
+    }
+
+    .hero-mockup-wrapper::before,
+    .cta-banner-section::before,
+    .btn-primary::after,
+    .btn-white::after {
+        animation: none;
+    }
+}

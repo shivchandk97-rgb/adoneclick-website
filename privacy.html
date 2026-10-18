@@ -7,6 +7,7 @@
     <meta name="description" content="Privacy Policy for AdOneClick — Learn how we protect and handle your advertising and lead integration data.">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/motion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,19 +85,23 @@
                 <p>When you connect your Google Ads account, we access Google API data solely for the purpose of integrating with your Google Ads campaigns and lead form assets. We only access scopes explicitly authorized by you. Our use and transfer of information received from Google APIs adheres strictly to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: underline;">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
                 <h2>5. Data We Receive from Meta (Facebook &amp; Instagram)</h2>
-                <p>When you connect your Meta account, we read, with your permission, your ad accounts, campaigns, ad sets, ads, budgets and performance numbers (spend, impressions, clicks, reach and conversions), plus leads submitted through your Lead Ads forms. We use this data only to show it to you inside AdOneClick and to import your leads into your CRM. We do not sell it, share it with other customers, or use it for advertising profiling. Our use of Meta data complies with the <a href="https://developers.facebook.com/policy/" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: underline;">Meta Platform Terms &amp; Developer Policies</a>.</p>
-                <p id="meta-data-deletion"><strong>Disconnecting and deletion.</strong> You can disconnect at any time in Integrations → Disconnect. This revokes our access at Meta and deletes the stored access tokens, and you can choose to delete all synced Meta data. Leads already imported into your CRM stay until you delete them. You can also email <a href="mailto:adoneclickcrm@gmail.com" style="color: var(--primary); font-weight: 600;">adoneclickcrm@gmail.com</a> to request deletion; we complete it within 30 days. Meta data is deleted when you disconnect with deletion or on request, and tokens are deleted as soon as you disconnect.</p>
+                <p>When you connect your Meta account to AdOneClick, we read the following with your permission: your ad accounts, campaigns, ad sets, ads, budgets and statuses; performance numbers (spend, impressions, clicks, reach and conversions); and the leads submitted through your Lead Ads forms.</p>
+                <p>We use this data only to show it to you inside AdOneClick and to import your leads into your CRM. We do not sell it, share it with other customers or third parties, or use it for advertising profiling. It is visible only to your workspace. Our use of Meta data complies with the <a href="https://developers.facebook.com/policy/" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: underline;">Meta Platform Terms &amp; Developer Policies</a>.</p>
 
-                <h2>6. Data Retention & Zero-Drop Security</h2>
+                <h2 id="meta-data-deletion">6. Disconnecting from Meta and Deleting Your Meta Data</h2>
+                <p>You can disconnect at any time in AdOneClick under Integrations &gt; Disconnect. This revokes our access at Meta and permanently deletes the stored access tokens. You can also choose to delete all Meta data we synced (ad accounts, campaigns, ads, performance numbers and lead-form links). Leads already imported into your CRM are your own records and stay until you delete them.</p>
+                <p>You can also remove AdOneClick yourself in Facebook under Settings &gt; Business Integrations, or ask us to delete your data by emailing <a href="mailto:adoneclickcrm@gmail.com" style="color: var(--primary); font-weight: 600;">adoneclickcrm@gmail.com</a>. We complete deletion requests within 30 days. Meta data is retained only while your account is connected; once you disconnect with deletion, or request deletion, it is removed.</p>
+
+                <h2>7. Data Retention & Zero-Drop Security</h2>
                 <p>Lead payloads are transferred immediately upon receipt. In the event of downstream endpoint unavailability, payloads are stored temporarily in encrypted transit buffers with automated retry schedules. Data is retained only as long as necessary to complete delivery or as required by your subscription settings.</p>
 
-                <h2>7. Data Security Standards</h2>
+                <h2>8. Data Security Standards</h2>
                 <p>We implement state-of-the-art technical and organizational security controls, including TLS 1.3 encryption in transit, AES-256 bit encryption at rest, isolated tenant schemas, and continuous vulnerability scanning.</p>
 
-                <h2>8. User Rights & Data Deletion Requests</h2>
+                <h2>9. User Rights & Data Deletion Requests</h2>
                 <p>In accordance with GDPR, CCPA, and global privacy frameworks, you have the right to request access, rectification, portability, or complete permanent deletion of all personal data held within your workspace. To submit a data deletion request, email us at <a href="mailto:adoneclickcrm@gmail.com" style="color: var(--primary); font-weight: 600;">adoneclickcrm@gmail.com</a>. We fulfill verified requests within 30 days.</p>
 
-                <h2>9. Contact Information</h2>
+                <h2>10. Contact Information</h2>
                 <p>If you have any questions or privacy inquiries, please contact our Data Protection Officer:</p>
                 <ul>
                     <li>Email: adoneclickcrm@gmail.com</li>
@@ -104,7 +109,7 @@
                     <li>Address: 403, 22 Main, 9 cross, HSR Layout, Bengaluru</li>
                 </ul>
 
-                <p style="margin-top: 2rem; font-size: 0.85rem; color: #94A3B8;"><strong>Last Updated: October 2026</strong></p>
+                <p style="margin-top: 2rem; font-size: 0.85rem; color: #94A3B8;"><strong>Last Updated: October 19, 2026</strong></p>
             </div>
         </div>
     </section>
@@ -152,7 +157,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>&copy; 2026 AdOneClick Inc. All rights reserved.</div>
+                <div>&copy; 2026 One Click Solutions. All rights reserved.</div>
                 <div style="display: flex; gap: 20px;">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
@@ -167,5 +172,6 @@
     </button>
 
     <script src="js/script.js"></script>
+    <script src="js/motion.js"></script>
 </body>
 </html>

@@ -2782,14 +2782,6 @@ footer {
         gap: 12px;
     }
 
-    /* Floating Actions */
-    .floating-enquiry-btn {
-        bottom: 12px;
-        left: 12px;
-        padding: 8px 14px;
-        font-size: 0.78rem;
-    }
-
     .scroll-top {
         bottom: 12px;
         right: 12px;
@@ -2858,40 +2850,4 @@ footer {
 .role-manager { background: rgba(245, 158, 11, 0.1); color: var(--accent-amber); }
 .role-rep { background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald); }
 
-/* Floating Enquiry Form Button */
-.floating-enquiry-btn {
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    background: linear-gradient(135deg, var(--primary) 0%, #6366F1 100%);
-    color: #FFFFFF !important;
-    padding: 12px 22px;
-    border-radius: var(--radius-full);
-    font-size: 0.88rem;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 10px 25px -4px rgba(79, 70, 229, 0.45), 0 4px 10px rgba(0, 0, 0, 0.06);
-    z-index: 980;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    text-decoration: none;
-    letter-spacing: 0.01em;
-}
-
-.floating-enquiry-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 16px 32px -4px rgba(79, 70, 229, 0.55);
-    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
-}
-
-@media (max-width: 640px) {
-    .floating-enquiry-btn {
-        bottom: 1.25rem;
-        left: 1.25rem;
-        padding: 10px 16px;
-        font-size: 0.8rem;
-    }
-}
 

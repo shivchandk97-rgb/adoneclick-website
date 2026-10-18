@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initFaqAccordion();
     initLiveLeadSimulator();
     initScrollToTop();
-    initScrollAnimations();
     initContactForm();
 });
 
@@ -412,37 +411,6 @@ function initScrollToTop() {
             top: 0,
             behavior: 'smooth'
         });
-    });
-}
-
-/* --------------------------------------------------------------------------
-   Scroll Reveal Animations
-   -------------------------------------------------------------------------- */
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll(
-        '.stat-box, .tab-preview-card, .wf-node, .faq-item, .form-container'
-    );
-
-    if (!animatedElements.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-    });
-
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(el);
     });
 }
 
